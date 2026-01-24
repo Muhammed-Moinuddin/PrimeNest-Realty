@@ -3,9 +3,9 @@ import PropertyImage from '../../assets/primenest-property-image-1.png';
 
 function HeroSection() {
   return (
-    <section className="bg-light py-16 md:py-24">
+    <section className="bg-light py-14 md:py-24">
       <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-24 lg:gap-16 items-center">
           
           {/* LEFT SIDE - Content */}
           <div className="space-y-6">
@@ -28,7 +28,7 @@ function HeroSection() {
             {/* Heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark font-heading leading-tight">
               Find Your Perfect{' '}
-              <span className="inline-block text-brand bg-dark px-4 py-2 my-2 rounded-2xl">Dream Home</span>
+              <span className="inline-block text-light bg-dark px-4 py-2 my-2 rounded-2xl">Dream Home <div className="w-3 h-3 bg-brand rounded-full inline-block ml-1"></div></span>
             </h1>
 
             {/* Description */}
@@ -95,12 +95,20 @@ function HeroSection() {
               />
             </div>
 
-            {/* Decorative floating element (optional) */}
-            <div className="absolute top-20 -left-36 flex items-center justify-center">
+            {/* Decorative floating element above for 1440px */}
+            <div className="hidden 2xl:flex absolute top-20 -left-28 items-center justify-center">
               <div className=' bg-dark rounded-xl px-6 py-2'><span className='text-light'>Starting from AED 2.4M</span></div>  <MousePointer2 className='scale-x-[-1] mb-10' fill="currentColor" stroke="currentColor"/>
             </div>
-            <div className="absolute bottom-40 -right-24 flex items-center justify-center">
+            <div className="hidden 2xl:flex absolute bottom-40 -right-16 items-center justify-center">
               <MousePointer2 className='scale-y-[-1] mt-10' fill="currentColor" stroke="currentColor"/><div className=' bg-dark rounded-xl px-6 py-2'><span className='text-light'>Starting from $6M</span></div>
+            </div>
+
+            {/* Decorative floating element below for 1440px */}
+            <div className="2xl:hidden flex absolute left-4 items-center justify-center">
+              <div className=' bg-dark rounded-xl px-6 py-2'><span className='text-light'>Starting from $ 6M</span></div>  <MousePointer2 className='scale-x-[-1] mb-10' fill="currentColor" stroke="currentColor"/>
+            </div>
+            <div className="2xl:hidden flex absolute -top-16 right-0 items-center justify-center">
+              <MousePointer2 className='scale-y-[-1] mt-10' fill="currentColor" stroke="currentColor"/><div className=' bg-dark rounded-xl px-6 py-2'><span className='text-light'>Starting from AED 2.4M</span></div>
             </div>
           </div>
 
