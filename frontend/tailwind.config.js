@@ -64,17 +64,25 @@ export default {
         'glow': '0 0 20px rgba(194, 255, 73, 0.3)',  // Neon glow effect
         'card': '0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2)',
       },
-
       animation: {
         'scroll': 'scroll 30s linear infinite',
+        'scroll-left': 'scrollLeft 90s linear infinite',
+        'scroll-right': 'scrollRight 90s linear infinite',
       },
       keyframes: {
         scroll: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
         },
+        scrollLeft: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        scrollRight: {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
       },
-
     },
   },
   plugins: [],

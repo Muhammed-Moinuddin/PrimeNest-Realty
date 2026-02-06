@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Navbar from "./Navbar.tsx";
+import Footer from "./Footer.tsx";
 
 interface MainLayoutProps {
   children?: ReactNode;
@@ -14,6 +15,7 @@ const MainLayout = ({children}: MainLayoutProps) => {
                 {children}
             </main>
             {/* We'll place footer here */}
+            <Footer />
         </div>
     );
 }
